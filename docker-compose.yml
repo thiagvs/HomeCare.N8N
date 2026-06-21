@@ -1,0 +1,28 @@
+version: '3.8'
+
+networks:
+  n8n-docker_oss_demo:
+    external: true 
+
+services:
+  homecare-api:
+    build:
+      context: .
+      dockerfile: HomeCare.N8N.Api/Dockerfile
+    container_name: homecare-api
+    networks:
+      - n8n-docker_oss_demo
+    restart: unless-stopped
+    ports:
+      - "5000:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_URLS: http://+:8080
+
+      ConnectionStrings__Default: >
+        Host=postgres-oss;
+        Port=5432;
+        Database=n8n;
+        Username=n8n;
+        Password=n8n;
+        SearchPath=dev

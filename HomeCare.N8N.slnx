@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="HomeCare.N8N.Api/HomeCare.N8N.Api.csproj" />
+  <Project Path="HomeCare.N8N.Application/HomeCare.N8N.Application.csproj" Id="2432a081-47f1-4875-82e7-1663f4a74088" />
+  <Project Path="HomeCare.N8N.Data/HomeCare.N8N.Data.csproj" Id="182df068-9b1e-4938-aa19-be50d80e6891" />
+  <Project Path="HomeCare.N8N.Domain/HomeCare.N8N.Domain.csproj" Id="299d496f-e1f3-4dc5-9676-591fdfacb7a3" />
+</Solution>
